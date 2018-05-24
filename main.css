@@ -1,0 +1,14 @@
+.rotations div {
+    border: 1px solid black;
+    text-align: center;
+    min-height: 100px;
+}
+
+.sub-rotation {
+    display: none;
+}
+
+.previous-rotations div {
+    border: 1px solid black;
+    display: none;
+}
