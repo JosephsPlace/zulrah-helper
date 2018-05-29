@@ -4,8 +4,22 @@
     min-height: 100vh;
 }
 
+.title:not(.is-spaced)+.subtitle {
+    margin-bottom: 5px;
+}
+
+.notification:not(:last-child),
+.notification {
+    margin: 15px 0px;
+    padding: 5px;
+}
+
+.notification:hover {
+    opacity: .7;
+}
+
 .main-container {
-    max-width: 500px;
+    max-width: 800px;
     padding: 20px 5px;
 }
 
@@ -20,21 +34,33 @@
     transition: .1s ease all;
 }
 
+.box:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.reset-button {
+    padding: 5px;
+    text-align: center;
+}
+
 .rotations h5.title:not(:last-child) {
     margin-bottom: 5px;
 }
 
 .rotations .phase-image {
-    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
 }
 
 .rotations .phase-image.is-option:hover {
     cursor: pointer;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.35);
+    opacity: .7;
 }
 
 .previous-rotations .phase-image {
-    border: 2px solid;
+    opacity: .7;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
 }
 
 .previous-rotations .column {
@@ -55,7 +81,7 @@
     right: 0;
     left: 0;
     position: relative;
-    margin: auto auto 50px;
+    margin: 5px auto;
 
 }
 
@@ -69,26 +95,30 @@
 }
 
 .rotation-content {
-    padding: 10px 10px 20px;
-    border-radius: 4px;
-    border: 3px solid;
+    padding: 15px 15px 20px;
 }
 
 .dark.body {
-    background: #1c1d1a;
+    background: #191919;
 }
 
 .dark .title {
-    color: #e8eadd;
+    color: #e8e8e8;
 }
 
 .dark .subtitle {
-    color: #c4c5be;
+    color: #c5c5c5;
+}
+
+.dark .settings-box {
+    border: 1px solid #636363;
+    background: #272727;
+    color: #fff;
 }
 
 .dark .rotation-content {
-    background: #262722;
-    border-color: #696b5f;
+    background: #272727;
+    border-color: #636363;
 }
 
 .light.body {
@@ -100,8 +130,6 @@
 }
 
 .light .rotation-content {
-    background: #fff;
-    border-color: #e7ebf0;
 }
 
 .phase-image {

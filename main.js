@@ -9,11 +9,9 @@ new Vue({
     },
     methods: {
         selectRotation: function(rotation) {
-            console.log(rotation);
             this.rotation = rotation;
         },
         toggleTheme: function () {
-            console.log(this.theme);
             if (this.theme == "light") {
                 this.theme = "dark";
             } else {
@@ -21,7 +19,6 @@ new Vue({
             }
         },
         toggleStyle: function () {
-            console.log(this.theme);
             if (this.style == "simple") {
                 this.style = "realistic";
             } else {
@@ -45,7 +42,6 @@ new Vue({
             var images_to_rotate = document.querySelectorAll('.phase-image');
 
             for (var i = 0; i < images_to_rotate.length; i++) {
-                console.log(images_to_rotate[i]);
                 images_to_rotate[i].style = "transform: rotate(" + this.degrees + "deg)";
             }
         }
