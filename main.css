@@ -14,6 +14,10 @@
     padding: 5px;
 }
 
+.notification.is-primary {
+    background-color: #0bbfa4;
+}
+
 .notification:hover {
     opacity: .7;
 }
