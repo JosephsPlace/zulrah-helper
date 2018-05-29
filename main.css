@@ -8,10 +8,46 @@
     margin-bottom: 5px;
 }
 
+.is-offset-3-5 {
+    margin-left: 29.166%;
+}
+
 .notification:not(:last-child),
 .notification {
     margin: 15px 0px;
     padding: 5px;
+}
+
+.legend-circle {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.legend-circle.range {
+    background: rgba(130, 230, 103, 0.9);
+    border: 1px solid rgba(130, 230, 103, 0.9);
+}
+
+.legend-circle.mage {
+    background: rgba(80, 134, 227, .9);
+    border: 1px solid rgba(80, 134, 227, .9);
+}
+
+.legend-circle.melee {
+    background: rgba(228, 128, 140, .9);
+    border: 1px solid rgba(228, 128, 140, .9);
+}
+
+.legend-circle.left {
+    width: 8px;
+    border-radius: 16px 0 0 16px;
+}
+
+.legend-circle.right {
+    width: 8px;
+    border-radius: 0 16px 16px 0;
 }
 
 .notification.is-primary {
