@@ -1,57 +1,53 @@
-document.getElementById("reset").addEventListener("click", reset);
+new Vue({
+    el: '#zulrah-helper',
+    data: {
+        displaySettings: false,
+        rotation: 0,
+        theme: "dark",
+        style: "simple",
+        degrees: 0,
+    },
+    methods: {
+        selectRotation: function(rotation) {
+            console.log(rotation);
+            this.rotation = rotation;
+        },
+        toggleTheme: function () {
+            console.log(this.theme);
+            if (this.theme == "light") {
+                this.theme = "dark";
+            } else {
+                this.theme = "light";
+            }
+        },
+        toggleStyle: function () {
+            console.log(this.theme);
+            if (this.style == "simple") {
+                this.style = "realistic";
+            } else {
+                this.style = "simple";
+            }
+        },
+        toggleSettings: function () {
+            if (this.displaySettings == true) {
+                this.displaySettings = false;
+            } else {
+                this.displaySettings = true;
+            }
+        },
+        rotateImages: function (direction) {
+            if (direction == 'left') {
+                this.degrees -= 90;
+            } else {
+                this.degrees += 90;
+            }
 
-document.getElementById("select-rotation-1").addEventListener("click", this.selectRotation.bind(null, 'one'), false);
-document.getElementById("select-rotation-2").addEventListener("click", this.selectRotation.bind(null, 'two'), false);
-document.getElementById("select-rotation-3").addEventListener("click", this.selectRotation.bind(null, 'three'), false);
+            var images_to_rotate = document.querySelectorAll('.phase-image');
 
-document.getElementById("select-rotation-1-path-1").addEventListener("click", this.selectSubRotation.bind(null, 'one'), false);
-document.getElementById("select-rotation-1-path-2").addEventListener("click", this.selectSubRotation.bind(null, 'two'), false);
-
-function selectRotation(option) {
-    console.log(option);
-
-    document.getElementById("previous-rotation-start").style.display = "block";
-    document.getElementById("select-rotations-start").style.display = "none";
-    document.getElementById("select-rotations-1").style.display = "none";
-
-    if (option === 'one') {
-        document.getElementById("previous-rotation-1").style.display = "block";
-        document.getElementById("sub-rotation-1").style.display = "block";
-    } else if (option === 'two') {
-        document.getElementById("previous-rotation-start").style.display = "block";
-        document.getElementById("sub-rotation-2").style.display = "block";
-    } else if (option === 'three') {
-        document.getElementById("previous-rotation-start").style.display = "block";
-        document.getElementById("sub-rotation-3").style.display = "block";
+            for (var i = 0; i < images_to_rotate.length; i++) {
+                console.log(images_to_rotate[i]);
+                images_to_rotate[i].style = "transform: rotate(" + this.degrees + "deg)";
+            }
+        }
     }
-}
-
-function selectSubRotation(option) {
-    document.getElementById("sub-rotation-1").style.display = "none";
-
-    if (option === 'one') {
-        document.getElementById("previous-rotation-1-part-1").style.display = "block";
-        document.getElementById("sub-rotation-1-part-1").style.display = "block";
-    } else if (option === 'two') {
-        document.getElementById("previous-rotation-1-part-2").style.display = "block";
-        document.getElementById("sub-rotation-1-part-2").style.display = "block";
-    }
-}
-
-function reset() {
-    document.getElementById("select-rotations-1").style.display = "flex";
-
-    var previous_rotations = document.querySelectorAll(".previous-rotation");
-    var sub_rotations = document.querySelectorAll(".sub-rotation");
-
-    console.log(previous_rotations);
-    console.log(sub_rotations);
-
-    for (var i = 0; i< previous_rotations.length; i++) {
-        previous_rotations[i].style.display = "none";
-    }
-
-    for (var i = 0; i< sub_rotations.length; i++) {
-        sub_rotations[i].style.display = "none";
-    }
-}
+});
