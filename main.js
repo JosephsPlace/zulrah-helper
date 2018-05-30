@@ -38,12 +38,6 @@ new Vue({
             } else {
                 this.degrees += 90;
             }
-
-            var images_to_rotate = document.querySelectorAll('.phase-image');
-
-            for (var i = 0; i < images_to_rotate.length; i++) {
-                images_to_rotate[i].style = "transform: rotate(" + this.degrees + "deg)";
-            }
         }
     }
 });
