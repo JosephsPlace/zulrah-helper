@@ -8,10 +8,6 @@
     margin-bottom: 5px;
 }
 
-.is-offset-3-5 {
-    margin-left: 29.166%;
-}
-
 .notification:not(:last-child),
 .notification {
     margin: 15px 0px;
