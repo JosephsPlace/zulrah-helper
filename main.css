@@ -70,6 +70,10 @@
     transition: .1s ease all;
 }
 
+.jad-circle-transition {
+    transition: .1s ease all;
+}
+
 .box:not(:last-child) {
     margin-bottom: 5px;
 }

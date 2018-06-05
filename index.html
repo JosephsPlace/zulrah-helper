@@ -73,11 +73,15 @@
                         <p class="menu-label is-marginless">Melee</p>
                     </div>
                     <div class="column is-2 has-text-centered">
-                        <div class="legend-circle left range"></div><div class="legend-circle right mage"></div>
+                        <span class="is-block jad-circle-transition is-marginless" :style="'transform: rotate(' + degrees + 'deg);'">
+                            <div class="legend-circle left range"></div><div class="legend-circle right mage"></div>
+                        </span>
                         <p class="menu-label is-marginless">Range first Jad</p>
                     </div>
                     <div class="column is-2 has-text-centered">
-                        <div class="legend-circle left mage"></div><div class="legend-circle right range"></div>
+                        <span class="is-block jad-circle-transition is-marginless" :style="'transform: rotate(' + degrees + 'deg);'">
+                            <div class="legend-circle left mage"></div><div class="legend-circle right range"></div>
+                        </span>
                         <p class="menu-label is-marginless">Mage first Jad</p>
                     </div>
                 </div>
